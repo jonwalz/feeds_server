@@ -1,0 +1,29 @@
+{
+  "name": "feeds_typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build:live",
+    "build": "tsc -p .",
+    "build:live": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^10.12.21",
+    "apollo-server": "^2.3.1",
+    "dotenv": "^6.0.0",
+    "firebase-admin": "^6.0.0",
+    "graphql": "^0.13.2",
+    "lodash": "^4.17.10",
+    "node-fetch": "^2.2.0",
+    "nodemon": "^1.18.9",
+    "request-promise": "^4.2.2",
+    "typescript": "^3.3.1"
+  },
+  "devDependencies": {
+    "ts-node": "^8.0.2",
+    "tslint": "^5.12.1"
+  }
+}
