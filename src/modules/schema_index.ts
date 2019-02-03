@@ -1,7 +1,7 @@
-const { makeExecutableSchema } = require("apollo-server")
-const Djs = require('./djs/djs_schema')
-const Feed = require('./feed/feed_schema')
-const resolvers = require('./resolver_index')
+import { makeExecutableSchema } from "apollo-server";
+import Djs from "./djs/djs_schema";
+import Feed from "./feed/feed_schema";
+import resolvers from "./resolver_index";
 
 const RootQuery = `
 # Comments in GraphQL are defined with the hash (#) symbol.
@@ -17,13 +17,14 @@ const SchemaDefinition = `
         query: RootQuery
         mutation: Mutation
     }
-`
-module.exports = makeExecutableSchema({
+`;
+
+export default makeExecutableSchema({
+    resolvers,
     typeDefs: [
-        SchemaDefinition,
+        Feed,
         RootQuery,
+        SchemaDefinition,
         Djs,
-        Feed
     ],
-    resolvers
-})
+});

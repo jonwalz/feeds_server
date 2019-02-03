@@ -8,6 +8,6 @@ const djs = `
   type Mutation {
       postDj(id: String!): DJ
   }
-`
+`;
 
-module.exports = djs
+export default djs;

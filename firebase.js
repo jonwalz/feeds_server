@@ -1,4 +1,4 @@
-var firebase = require('firebase-admin');
+import firebase from 'firebase-admin';
 
 var serviceAccount = require('./mixcloud-favorites-firebase.js');
 

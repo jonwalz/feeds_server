@@ -1,16 +1,17 @@
 // Gather the environment variables and make them available to the process
-require('dotenv').config()
-const { ApolloServer, gql } = require('apollo-server');
-const schema = require('./modules/schema_index')
-const resolvers = require('./modules/resolver_index')
+import dotenv from "dotenv";
+dotenv.config();
+import { ApolloServer, gql } from "apollo-server";
+import schema from "./modules/schema_index";
+import resolvers from "./modules/resolver_index";
 
 const server = new ApolloServer({
-  schema: schema,
-  resolvers: resolvers,
+    resolvers,
+    schema,
 });
 
 interface Server {
-    readonly url: string
+    readonly url: string;
 }
 
 server.listen().then(({ url }: Server ) => {
