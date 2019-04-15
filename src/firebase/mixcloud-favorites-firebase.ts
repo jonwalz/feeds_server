@@ -1,6 +1,6 @@
 const config = {
-  "type": process.env.type,
-  "project_id": process.env.project_id,
+  "type": 'service_account',
+  "project_id": "feeds",
   "private_key_id": process.env.private_key_id,
   "private_key": process.env.private_key && process.env.private_key.replace(/\\n/g, "\n"),
   "client_email": process.env.client_email,

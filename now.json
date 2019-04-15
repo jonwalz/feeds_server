@@ -1,0 +1,15 @@
+{
+    "name": "mixcloud-typescript",
+    "version": 2,
+    "builds": [{ "src": "lib/index.js", "use": "@now/node-server" }],
+    "routes": [{ "src": "/.*", "dest": "lib/index.js" }],
+    "env": {
+        "private_key_id": "@private_key_id",
+        "client_email": "@client_email",
+        "client_id": "@client_id",
+        "auth_uri": "@auth_uri",
+        "token_uri": "@token_uri",
+        "auth_provider_x509_cert_url": "@auth_provider_x509_cert_url",
+        "client_x509_cert_url": "client_x509_cert_url"
+    }
+}

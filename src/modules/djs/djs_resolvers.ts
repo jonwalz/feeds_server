@@ -1,4 +1,4 @@
-import firebase from "../../../firebase";
+import firebase from "../../firebase/firebase";
 import fetch from "node-fetch";
 
 const fbUsers = firebase.database().ref("/users");

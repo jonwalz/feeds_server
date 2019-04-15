@@ -9,6 +9,8 @@
             "options": [120]
         },
         "no-any": false,
+        "no-unsafe-any": false,
+        "no-var-requires": false,
         "new-parens": true,
         "no-arg": true,
         "no-bitwise": true,
@@ -17,7 +19,8 @@
         "no-console": {
             "severity": "warning",
             "options": ["debug", "info", "log", "time", "timeEnd", "trace"]
-        }
+        },
+        "prefer-const": false,
     },
     "jsRules": {
         "max-line-length": {
